@@ -1,0 +1,97 @@
+var str="";
+var input=document.getElementById('text');
+document.getElementsByClassName('k7')[0].addEventListener('click',function(){
+  str+="7";
+  input.innerText=str;
+});
+document.getElementsByClassName('k8')[0].addEventListener('click',function(){
+  str+="8";
+  input.innerText=str;
+});
+document.getElementsByClassName('k9')[0].addEventListener('click',function(){
+  str+="9";
+  input.innerText=str;
+});
+document.getElementsByClassName('k1')[0].addEventListener('click',function(){
+  str+="1";
+  input.innerText=str;
+});
+document.getElementsByClassName('k2')[0].addEventListener('click',function(){
+  str+="2";
+  input.innerText=str;
+});
+document.getElementsByClassName('k3')[0].addEventListener('click',function(){
+  str+="3";
+  input.innerText=str;
+});
+document.getElementsByClassName('k4')[0].addEventListener('click',function(){
+  str+="4";
+  input.innerText=str;
+});
+document.getElementsByClassName('k5')[0].addEventListener('click',function(){
+  str+="5";
+  input.innerText=str;
+});
+document.getElementsByClassName('k6')[0].addEventListener('click',function(){
+  str+="6";
+  input.innerText=str;
+});
+document.getElementsByClassName('k0')[0].addEventListener('click',function(){
+  str+="0";
+  input.innerText=str;
+});
+document.getElementsByClassName('add')[0].addEventListener('click',function(){
+  str+="+";
+  input.innerText=str;
+});
+document.getElementsByClassName('minus')[0].addEventListener('click',function(){
+  str+="-";
+  input.innerText=str;
+});
+document.getElementsByClassName('mul')[0].addEventListener('click',function(){
+  str+="*";
+  input.innerText=str;
+});
+document.getElementsByClassName('dot')[0].addEventListener('click',function(){
+  str+=".";
+  input.innerText=str;
+});
+document.getElementsByClassName('divide')[0].addEventListener('click',function(){
+  str+="/";
+  input.innerText=str;
+});
+document.getElementsByClassName('percent')[0].addEventListener('click',function(){
+  str/=100;
+  input.innerText=str;
+});
+
+document.getElementsByClassName('negate')[0].addEventListener('click',function(){
+  if(str=="")
+  return;
+    str=eval(str+"*-1");
+  input.innerText=str;
+});
+document.getElementsByClassName('backspace')[0].addEventListener('click',function(){
+  str=String(str);
+  var s=str.slice(0,str.length-1);
+  input.innerText=s;
+  str=s;
+});
+document.getElementsByClassName('equal')[0].addEventListener('click',function(){
+  if(str==""){
+    str="ERROR";
+    input.innerText=str;
+    return;
+  }
+  str=eval(str);
+  if(str=="Infinity")
+  {
+    str="ERROR";
+  }
+  input.innerText=str;
+
+});
+document.getElementsByClassName('AC')[0].addEventListener('click',function(){
+  str="";
+  input.innerText=str;
+});
